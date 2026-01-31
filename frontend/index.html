@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              light: '#8b5cf6', // Violet 500
+              DEFAULT: '#7c3aed', // Violet 600
+              dark: '#6d28d9', // Violet 700
+            },
+            secondary: {
+              light: '#f0abfc', // Fuchsia 300
+              DEFAULT: '#d946ef', // Fuchsia 500
+              dark: '#c026d3', // Fuchsia 600
+            },
+            surface: '#ffffff',
+            background: '#f8fafc', // Slate 50
+          },
+          boxShadow: {
+            'material-1': '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+            'material-2': '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
+            'material-3': '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
+          }
+        }
+      }
+    }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="JobFlow - The intelligent job search platform. Find recent job listings from LinkedIn, Naukri, and more. Upload your CV and get smart matches instantly.">
+  <meta name="keywords" content="job search, career, resume parser, skill matching, job tracker, tech jobs">
+  <title>JobFlow</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

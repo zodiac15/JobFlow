@@ -1,0 +1,17 @@
+flask
+flask_sqlalchemy
+flask_cors
+beautifulsoup4
+requests
+selenium
+webdriver-manager
+pypdf
+python-docx
+pytest
+flask-login
+flask-wtf
+flask-limiter
+gunicorn
+
+google-generativeai
+python-dotenv
