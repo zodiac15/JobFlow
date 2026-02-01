@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+    environment:
+      - FLASK_ENV=development
+    volumes:
+      - ./backend:/app  # Hot-reloading: changes in code update container instantly
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: "" # Empty for relative paths (proxied by Nginx)
+    container_name: frontend
+    env_file:
+      - ./frontend/.env
+    ports:
+      - "8080:80"  # Map local 8080 to container 80 (since you might have stuff on 80)
+    depends_on:
+      - backend

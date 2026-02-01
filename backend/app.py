@@ -309,4 +309,4 @@ if __name__ == '__main__':
 
     # Security: Disable debug in production
     debug_mode = os.getenv('FLASK_DEBUG', 'False').lower() == 'true'
-    app.run(debug=debug_mode, port=5000)
+    app.run(debug=debug_mode, port=5000, host='0.0.0.0')
